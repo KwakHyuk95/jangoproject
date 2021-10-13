@@ -1,11 +1,10 @@
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
-from ..models import Question, Answer, Comment
-from ..forms import QuestionForm, AnswerForm, CommentForm
-from django.http import HttpResponse
-from django.core.paginator import Paginator
-from django.contrib.auth.decorators import login_required
-from django.contrib import messages
+from ..forms import AnswerForm
+from ..models import Question, Answer
+
 
 @login_required(login_url='common:login')
 def answer_create(request, question_id):

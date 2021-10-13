@@ -24,7 +24,6 @@ urlpatterns = [
     path('common/', include('common.urls')),
     path('', base_views.index, name='index'),
     #path('url명', 뷰에서.가져올함수)
-
     #path('testpage/', views.test),
     #path('<int:question_id>', views.detail),
 ]
